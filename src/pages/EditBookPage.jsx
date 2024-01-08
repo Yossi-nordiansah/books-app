@@ -31,7 +31,7 @@ const EditBookPage = ({ books, setBooks }) => {
     }]);
     e.preventDefault();
 
-    navigate("/books-app/");
+    navigate("/books-app");
   };
 
   return (

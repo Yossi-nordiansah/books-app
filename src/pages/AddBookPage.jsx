@@ -34,7 +34,7 @@ const AddBookPage = ({books, setBooks}) => {
       alert("data tidak boleh kosong");
     } else {
       setBooks([...books, seeder]);
-      navigate("/books-app/");
+      navigate("/books-app");
     }
   };
 
