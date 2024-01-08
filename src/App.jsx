@@ -1,15 +1,25 @@
-import { useState } from 'react'
-import './App.css'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
+import AddBookPage from "./pages/AddBookPage";
+import EditBookPage from "./pages/EditBookPage";
+import { useState } from "react";
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [books, setBooks] = useState([
+  ])
 
   return (
-    <>
-      <h1 className='text-center'>Hello World</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolores doloremque, odit quis iure dolorem totam, eius distinctio, nisi asperiores quidem fugiat quas vitae? Veniam nostrum voluptatibus repellat harum cum. Suscipit distinctio, velit vero porro quaerat sunt facere tenetur modi rerum repellendus quisquam inventore dolorem eum veniam maxime soluta aliquid harum dolorum reiciendis error, nemo debitis? Accusantium aliquid, minima quod eveniet adipisci consectetur harum laudantium exercitationem? Optio vel maiores, rerum harum nulla inventore repellat dolorum id ratione quam, ab, sit cupiditate numquam. Consequatur atque provident nisi amet reprehenderit cum praesentium quam numquam corrupti nemo, optio error totam eaque, non architecto?</p>
-    </>
-  )
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Home books={books} setBooks={setBooks} />} />
+          <Route path="/tambah-buku" exact element={<AddBookPage books={books} setBooks={setBooks}/>} />
+          <Route path="/edit-buku/:id" exact element={<EditBookPage books={books} setBooks={setBooks}/>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
