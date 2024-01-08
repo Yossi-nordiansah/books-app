@@ -13,9 +13,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact element={<Home books={books} setBooks={setBooks} />} />
-          <Route path="/tambah-buku" exact element={<AddBookPage books={books} setBooks={setBooks}/>} />
-          <Route path="/edit-buku/:id" exact element={<EditBookPage books={books} setBooks={setBooks}/>} />
+          <Route path="/books-app/" exact element={<Home books={books} setBooks={setBooks} />} />
+          <Route path="/books-app/tambah-buku" exact element={<AddBookPage books={books} setBooks={setBooks}/>} />
+          <Route path="/books-app/edit-buku/:id" exact element={<EditBookPage books={books} setBooks={setBooks}/>} />
         </Routes>
       </BrowserRouter>
     </div>
